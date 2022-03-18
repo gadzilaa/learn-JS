@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let user = {
+        //     name: "Джон",
+        //     go: function () { alert(this.name) }
+        // };
+
+        // (user.go)()
+
+
+        // function makeUser() {
+        //     return {
+        //         name: "Джон",
+        //         ref() {
+        //             return this;
+        //         }
+        //     };
+        // };
+
+        // let user = makeUser();
+
+        // alert(user.ref().name);
+
+        let calculator = {
+            sum() {
+                return this.a + this.b
+            },
+            mul() {
+                return this.a * this.b
+            },
+            read() {
+                this.a = +prompt('a?', 0)
+                this.b = +prompt('b?', 0)
+            }
+
+        };
+
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+
+
+
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+            },
+            showStep: function () { // показывает текущую ступеньку
+                alert(this.step);
+                return this;
+            }
+        };
+        ladder.up().up().down().showStep();
+    </script>
+</body>
+
+</html>

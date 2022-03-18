@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // const user = {};
+        //  user.name= 'John';
+        //  user.surname = 'Smith';
+        //  user.name = 'Pete'
+        //  delete user.name
+        //  console.log(user);
+
+        // const isEmpty = (obj) => {
+
+        //     for(let key in obj) {
+        //         return false;
+        //     }
+        //     return true;
+        // }
+        // let salaries = {
+        //     John: 100,
+        //     Ann: 160,
+        //     Pete: 130
+        // }
+        // alert(salaries.John + salaries.Ann + salaries.Pete)
+
+        // let sum = 0;
+        // for (let key in salaries) {
+        //     sum += salaries[key];
+        // }
+
+        // до вызова функции
+
+
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        const multiplyNumeric = (obj) => {
+            for (let key in obj) {
+                if (typeof obj.key === 'number') {
+                    obj[key] *= 2;
+                }
+            }
+        }
+
+        multiplyNumeric(menu);
+
+        // после вызова функции
+        menu = {
+            width: 400,
+            height: 600,
+            title: "My menu"
+        };
+
+    </script>
+</body>
+
+</html>
